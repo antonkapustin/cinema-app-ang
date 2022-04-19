@@ -7,7 +7,7 @@ import { SliderComponent } from "../slider/slider.component";
 @Component({
   selector: "app-slider-films",
   templateUrl: "./slider-films.component.html",
-  styleUrls: ["./slider-films.component.less"],
+  styleUrls: ["../slider/slider.component.less"],
   encapsulation: ViewEncapsulation.None,
 })
 export class SliderFilmsComponent extends SliderComponent implements OnInit {
