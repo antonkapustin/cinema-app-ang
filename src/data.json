@@ -13,6 +13,7 @@
     {
       "name": "Вечные",
       "image": "assets/vechnye.jpeg",
+      "active": "slider__img_active",
       "rating": "8/10",
       "duration": "2h37min",
       "category": "+13",

@@ -1,7 +1,10 @@
-<!-- <div class="slider__content">
-  <div class="slider__item" *ngFor="let item of items$ | async">
-    <a class="slider__link" href="?name={{ item.name }}#details"
-      ><img class="slider__img {{ item.active }}" src="{{ image }}" alt="{{ name }}"
+<div class="slider__content">
+  <div class="slider__item" *ngFor="let item of data">
+    <a class="slider__link" href="?name={{ item['name'] }}#details"
+      ><img
+        class="slider__img {{ item['active'] }}"
+        src="{{ item['image'] }}"
+        alt="{{ item['name'] }}"
     /></a>
   </div>
 </div>
@@ -11,10 +14,10 @@
       <button class="slider__button" type="button" value="prev"><</button>
     </li>
     <li class="slider__item_navigation">
-      <div class="slider__dote"></div>
+      <div class="slider__dote" *ngFor="let item of data"></div>
     </li>
     <li class="slider__item_navigation">
       <button class="slider__button" type="button" value="next">></button>
     </li>
   </ul>
-</div> -->
+</div>

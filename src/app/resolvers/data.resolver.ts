@@ -7,17 +7,17 @@ import {
 } from "@angular/router";
 import { catchError, delay, EMPTY, Observable, of } from "rxjs";
 import { IData } from "src/data";
-import { HttpService } from "../http.service";
+import { HttpService } from "../services/http.service";
 
 @Injectable({
   providedIn: "root",
 })
-export class DataResolver implements Resolve<IData[]> {
+export class DataResolver implements Resolve<IData> {
   constructor(private http: HttpService, private router: Router) {}
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<IData[]> {
+  ): Observable<IData> {
     return this.http.getData().pipe(
       delay(200),
       catchError(() => {
